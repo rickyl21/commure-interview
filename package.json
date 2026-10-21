@@ -9,7 +9,7 @@
     "setup": "npm install && npm --prefix web install && cd server && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt",
     "typecheck": "npm --prefix web run build",
     "reset-db": "rm -f server/dev.db server/dev.db-*",
-    "dev:api": "cd server && .venv/bin/uvicorn main:app --reload --port 3001"
+    "dev:api": "cd server && .venv/bin/uvicorn main:app --reload --port 3001 --env-file .env"
   },
   "keywords": [],
   "type": "commonjs",
